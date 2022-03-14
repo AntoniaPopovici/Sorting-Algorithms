@@ -1,3 +1,5 @@
+// DE CITIT FISIERUL README!!!
+
 #include <iostream>
 #include <fstream>
 #include <cstdlib>
@@ -138,7 +140,7 @@ void CountSort(long long* v, long long n, long long x)
     }
     for (i = 0; i < n; i++)
         countV[(v[i] / pas) % 10]++;
- 
+
     for (i = 1; i < 10; i++)
         countV[i] += countV[i - 1];
 
@@ -224,21 +226,30 @@ int main()
         cout << "Merge Sort: timp = " << timp << ", sortat corect = " << VerificareSortare(v, N[i]) << '\n';
         delete[] c;
         c = nullptr;
-
-        GenerateNumbers(v, 0, Max[i], N[i]);
-        t1 = clock();
-        CountingSort(v, N[i]);
-        t2 = clock();
-        timp = ((double)t2 - t1) / CLOCKS_PER_SEC;
-        cout << "Counting Sort: timp = " << timp << ", sortat corect = " << VerificareSortare(v, N[i]) << '\n';
-
-        GenerateNumbers(v, 0, Max[i], N[i]);
-        t1 = clock();
-        InsertionSort(v, N[i]);
-        t2 = clock();
-        timp = ((double)t2 - t1) / CLOCKS_PER_SEC;
-        cout << "Insertion Sort: timp = " << timp << ", sortat corect = " << VerificareSortare(v, N[i]) << '\n';
         
+        if (N[i] < 1000000)
+        {
+            GenerateNumbers(v, 0, Max[i], N[i]);
+            t1 = clock();
+            CountingSort(v, N[i]);
+            t2 = clock();
+            timp = ((double)t2 - t1) / CLOCKS_PER_SEC;
+            cout << "Counting Sort: timp = " << timp << ", sortat corect = " << VerificareSortare(v, N[i]) << '\n';
+        }
+        else
+            cout << "Counting Sort: timpul de sortare este prea mare (aproximativ 2 ore)" << '\n';
+
+        if (N[i] < 1000000)
+        {
+            GenerateNumbers(v, 0, Max[i], N[i]);
+            t1 = clock();
+            InsertionSort(v, N[i]);
+            t2 = clock();
+            timp = ((double)t2 - t1) / CLOCKS_PER_SEC;
+            cout << "Insertion Sort: timp = " << timp << ", sortat corect = " << VerificareSortare(v, N[i]) << '\n';
+        }
+        else
+            cout << "Insertion Sort: timpul de sortare este prea mare (aproximativ 30 de minute)" << '\n';
         GenerateNumbers(v, 0, Max[i], N[i]);
         t1 = clock();
         sort(v, v + N[i]);
