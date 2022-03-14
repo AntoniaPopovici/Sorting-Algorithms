@@ -1,4 +1,4 @@
-// DE CITIT FISIERUL README!!!
+// DE CITIT FISIERUL README!
 
 #include <iostream>
 #include <fstream>
