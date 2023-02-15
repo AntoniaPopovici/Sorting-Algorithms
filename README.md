@@ -1,4 +1,8 @@
-# Proiect-Structuri-de-Date
-Nu au fost testate numerele N = 1000000, Max = 10000000 pentru Counting Sort si Insertion Sort, deoarece cele doua sunt foarte ineficiente. Este un printscreen in PowerPoint (slide-ul 9) cu timpii de rulare pentru datele de intrare respective, algoritmii nefiind modificati de atunci. Pot fi testate aceste date de intrare (trebuie modificate conditiile din main pentru cei doi algoritmi), insa timpul variaza intre 20 (Insertion Sort) - 160 (Counting Sort) de minute.
+# Data Structures Project - Sorting Algorithms
+<p>
+The code compares the complexity of five sorting algorithms: Counting Sort, Insertion Sort, Merge Sort, Shell Sort and Radix Sort. The PowerPoint contains details about these.
+</p>
+<p> If the output of the program is 1, the numbers generated are sorted correct. Otherwise, they are not.
 
-Daca este afisat 1, sirul este sortat corect. Daca este afisat 0, nu este sortat corect.
+<p> Numbers N = 1000000 and Max = 10000000 weren't tested for Counting Sort and Insertion Sort, since they are inefficient. In the PowerPoint, 9th slide, there is a printscreen with the running time for both of them.
+</p>
